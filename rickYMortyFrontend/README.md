@@ -1,0 +1,1 @@
+En esta pagina web se puede hacer una vista rapida sobre los personajes que ofrece la API REST de rick y morty. Esta hecha mediante HTML5, CSS3 y JS(DOM).

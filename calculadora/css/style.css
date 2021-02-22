@@ -1,0 +1,121 @@
+#calculadora{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 430px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 5px 15px 15px 15px;
+    border-radius: 5px;
+    background: lightgrey;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#cabecera{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.boton{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#boton1{
+    background: #FB431A;
+}
+
+#boton2{
+    background: #FEE14B;
+}
+
+#boton3{
+    background: #82EC53;
+}
+
+#nombre{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+#display{
+    width: 100%;
+    height: 80px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px 0;
+    background: beige;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    text-align: right;
+    font-size: 60px;
+}
+
+#teclado{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+#contenedor-left{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 5px;
+}
+
+#contenedor-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+
+.botones{
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    background: #ECF0F1;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.boton-regular{
+    width: 90px;
+    height: 60px;
+}
+
+.cero{
+    width: 195px;
+    height: 60px;
+}
+
+.equal{
+    width: 90px;
+    height: 135px;
+    line-height: 200px;
+}
+
+.botones:hover{
+    background: darkgray;
+}
+
+.botones:active{
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}

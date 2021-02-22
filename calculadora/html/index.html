@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script>
+            function addValue(a) {
+                document.getElementById("display").innerHTML += a
+            }
+
+            function clean(){
+                document.getElementById("display").innerHTML = ""
+            }
+
+            function solve(){
+                document.getElementById("display").innerHTML = eval(document.getElementById("display").innerHTML)
+            }
+        </script>
+    </head>
+    <body>
+        <div id="calculadora">
+            <div id="cabecera">
+                <div class="boton" id="boton1"></div>
+                <div class="boton" id="boton2"></div>
+                <div class="boton" id="boton3"></div>
+                <p id="nombre">Calculadora</p>
+            </div>
+            <div id="display"></div>
+            <div id="teclado">
+                <div id="contenedor-left">
+                    <div class="botones boton-regular">MC</div>
+                    <div class="botones boton-regular">M+</div>
+                    <div class="botones boton-regular" onclick="clean()">C</div>
+                    <div class="botones boton-regular" onclick="addValue('^')">^</div>
+                    <div class="botones boton-regular" onclick="addValue(7)">7</div>
+                    <div class="botones boton-regular" onclick="addValue(8)">8</div>
+                    <div class="botones boton-regular" onclick="addValue(4)">4</div>
+                    <div class="botones boton-regular" onclick="addValue(5)">5</div>
+                    <div class="botones boton-regular" onclick="addValue(1)">1</div>
+                    <div class="botones boton-regular" onclick="addValue(2)">2</div>
+                    <div class="botones cero" onclick="addValue(0)">0</div>
+                </div>
+                <div id="contenedor-right">
+                    <div class="botones boton-regular">M-</div>
+                    <div class="botones boton-regular" onclick="addValue('/')">/</div>
+                    <div class="botones boton-regular" onclick="addValue(9)">9</div>
+                    <div class="botones boton-regular" onclick="addValue(6)">6</div>
+                    <div class="botones boton-regular" onclick="addValue(3)">3</div>
+                    <div class="botones boton-regular" onclick="addValue(',')">,</div>
+                    <div class="botones boton-regular">MR</div>
+                    <div class="botones boton-regular" onclick="addValue('*')">*</div>
+                    <div class="botones boton-regular" onclick="addValue('-')">-</div>
+                    <div class="botones boton-regular" onclick="addValue('+')">+</div>
+                    <div class="botones equal" onclick="solve()">=</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Peliculas</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script>
+            const films = [
+                {
+                    name: "La comunidad del anillo",
+                    img: "https://i1.wp.com/elanillounico.com/wp-content/uploads/2016/12/ESDLA.-LCDA1.jpg?fit=900%2C900&ssl=1",
+                    director: "Peter Jackson",
+                    year: 2000,
+                },
+                {
+                    name: "Las dos torres",
+                    img: "https://pics.filmaffinity.com/El_se_or_de_los_anillos_Las_dos_torres-450612576-large.jpg",
+                    director: "Peter Jackson",
+                    year: 2000,
+                },
+                {
+                    name: "El retorno del rey",
+                    img: "https://pics.filmaffinity.com/El_se_or_de_los_anillos_El_retorno_del_rey-164432989-large.jpg",
+                    director: "Peter Jackson",
+                    year: 2000,
+                },
+            ]
+
+            const cargarListado = () => {
+                var html = ""
+                for(var i = 0; i < films.length; i++){
+                    html += "<div class='mini' onclick='show(" + i + ")'>"
+                    html += "<img class='thumbnail' src='" + films[i].img + "'/>"
+                    html += "<div class='title'>" + films[i].name + "</div>"
+                    html += "</div>"
+                }
+
+                document.getElementById("listado").innerHTML = html
+            }
+
+            const show = (index) => {
+                document.getElementById("img-detail").src = films[index].img
+                document.getElementById("datos").innerHTML += films[index].name + ". " + films[index].director
+            }
+        </script>
+    </head>
+    <body onload='cargarListado()'>
+        <div id="detalle">
+            <img id="img-detail">
+            <div id="datos"></div>
+        </div>
+        <div id="listado">
+
+        </div>
+    </body>
+</html>
